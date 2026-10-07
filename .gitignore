@@ -1,0 +1,23 @@
+# Node dependencies
+node_modules/
+
+# Angular & NestJS build artifacts
+dist/
+.angular/
+out-ptr/
+
+# Database data directories & logs
+pgdata/
+*.log
+*.sqlite
+*.sqlite3
+
+# Environment files
+.env
+.env.local
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

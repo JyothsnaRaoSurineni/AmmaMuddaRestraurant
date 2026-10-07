@@ -1,0 +1,222 @@
+/* Krishnapatnam Master CSS & Theme System */
+:root {
+  --bg-primary: #0d0f12;
+  --bg-secondary: #14171d;
+  --bg-card: rgba(26, 30, 38, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --accent-gold: #d4af37;
+  --accent-gold-light: #f4d068;
+  --accent-gold-glow: rgba(212, 175, 55, 0.3);
+  --accent-red: #e63946;
+  --accent-red-hover: #c92a37;
+  --text-main: #f8f9fa;
+  --text-muted: #a0a6b5;
+  --text-gold: #e2c055;
+  --border-color: rgba(212, 175, 55, 0.18);
+  --border-hover: rgba(212, 175, 55, 0.45);
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.15);
+  --shadow-dark: 0 15px 35px rgba(0, 0, 0, 0.5);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-font {
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold-light);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.text-gold {
+  color: var(--accent-gold);
+}
+
+.text-red {
+  color: var(--accent-red);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title span.subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.section-title h2::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  margin: 15px auto 0;
+}
+
+/* Custom Buttons */
+.btn-gold {
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #b89128 100%);
+  color: #0d0f12;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px var(--accent-gold-glow);
+  transition: var(--transition);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
+  color: #000;
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--accent-gold);
+  border: 2px solid var(--accent-gold);
+  font-weight: 600;
+  padding: 10px 26px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.btn-outline-gold:hover {
+  background: var(--accent-gold);
+  color: #0d0f12;
+  transform: translateY(-2px);
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Badge Styles */
+.badge-veg {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #2ecc71;
+  border: 1px solid #2ecc71;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.badge-nonveg {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.badge-spicy {
+  background: rgba(230, 57, 70, 0.15);
+  color: var(--accent-red);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-special {
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--accent-gold-light);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
