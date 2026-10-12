@@ -86,7 +86,7 @@ import { CartService } from '../../services/cart.service';
         <div *ngIf="!loading" class="menu-grid">
           <div *ngFor="let item of menuItems" class="menu-card glass-card">
             <div class="card-image-box">
-              <img [src]="item.image_url" [alt]="item.title" (error)="onImgError($event)" loading="lazy">
+              <img [src]="getItemImage(item)" [alt]="item.title" (error)="onImgError($event, item)" loading="lazy">
               <span class="item-rating">
                 <i class="bi bi-star-fill"></i> {{ item.rating }}
               </span>
@@ -480,7 +480,7 @@ export class MenuComponent implements OnInit, OnDestroy {
   constructor(
     private apiService: ApiService,
     private cartService: CartService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadMenu();
@@ -551,7 +551,51 @@ export class MenuComponent implements OnInit, OnDestroy {
     this.loadMenu();
   }
 
-  onImgError(event: any) {
-    event.target.src = 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80';
+  private readonly defaultDishImages: { [key: string]: string } = {
+    'mokka jonna garelu': 'assets/dishes/mokka_jonna_garelu.jpg',
+    'royyala iguru': 'assets/dishes/royyala_iguru.jpg',
+    'kodi vepudu': 'assets/dishes/kodi_vepudu.jpg',
+    'mutton ghee roast': 'assets/dishes/mutton_ghee_roast.jpg',
+    'paneer gutti vankaya masala': 'assets/dishes/paneer_gutti_vankaya.jpg',
+    'paneer gutti vankaya': 'assets/dishes/paneer_gutti_vankaya.jpg',
+    'gongura mamsam curry': 'assets/dishes/gongura_mamsam.jpg',
+    'gongura mamsam': 'assets/dishes/gongura_mamsam.jpg',
+    'nellore chepala pulusu': 'assets/dishes/nellore_chepala_pulusu.jpg',
+    'kodi vepudu pulao': 'assets/dishes/kodi_vepudu_pulao.jpg',
+    'amma mudda special mutton biryani': 'assets/dishes/mutton_biryani.jpg',
+    'mutton biryani': 'assets/dishes/mutton_biryani.jpg',
+    'avakaya paneer pulao': 'assets/dishes/avakaya_paneer_pulao.jpg',
+    'signature rose milk': 'assets/dishes/signature_rose_milk.jpg',
+    'rose milk': 'assets/dishes/signature_rose_milk.jpg',
+    'nannari sharbat': 'assets/dishes/nannari_sharbat.jpg',
+    'elaneer payasam': 'assets/dishes/elaneer_payasam.jpg',
+    'double ka meetha': 'assets/dishes/double_ka_meetha.jpg'
+  };
+
+  getItemImage(item: MenuItem): string {
+    if (item.image_url && !item.image_url.includes('unsplash.com')) {
+      return item.image_url;
+    }
+    const titleKey = item.title?.toLowerCase().trim();
+    if (titleKey && this.defaultDishImages[titleKey]) {
+      return this.defaultDishImages[titleKey];
+    }
+    for (const [key, path] of Object.entries(this.defaultDishImages)) {
+      if (titleKey && (titleKey.includes(key) || key.includes(titleKey))) {
+        return path;
+      }
+    }
+    return item.image_url || 'assets/dishes/mokka_jonna_garelu.jpg';
+  }
+
+  onImgError(event: any, item?: MenuItem) {
+    if (item) {
+      const fallback = this.getItemImage(item);
+      if (event.target.src !== fallback && !event.target.src.endsWith(fallback)) {
+        event.target.src = fallback;
+        return;
+      }
+    }
+    event.target.src = 'assets/dishes/mokka_jonna_garelu.jpg';
   }
 }

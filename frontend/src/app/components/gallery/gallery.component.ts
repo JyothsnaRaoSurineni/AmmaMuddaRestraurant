@@ -230,13 +230,13 @@ export class GalleryComponent {
 
   galleryItems: GalleryItem[] = [
     { id: 1, title: 'Jubilee Hills Royal Dining Hall', category: 'ambiance', imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80' },
-    { id: 2, title: 'Amma Mudda Dum Mutton Biryani', category: 'dishes', imageUrl: 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=80' },
-    { id: 3, title: 'Iconic Signature Rose Milk', category: 'drinks', imageUrl: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80' },
-    { id: 4, title: 'Royyala Iguru Coastal Prawns', category: 'dishes', imageUrl: 'https://images.unsplash.com/photo-1559742811-822863cc4c7e?auto=format&fit=crop&w=800&q=80' },
+    { id: 2, title: 'Amma Mudda Dum Mutton Biryani', category: 'dishes', imageUrl: 'assets/dishes/mutton_biryani.jpg' },
+    { id: 3, title: 'Iconic Signature Rose Milk', category: 'drinks', imageUrl: 'assets/dishes/signature_rose_milk.jpg' },
+    { id: 4, title: 'Royyala Iguru Coastal Prawns', category: 'dishes', imageUrl: 'assets/dishes/royyala_iguru.jpg' },
     { id: 5, title: 'Private Dining Cabana', category: 'ambiance', imageUrl: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80' },
-    { id: 6, title: 'Mokka Jonna Garelu with Chutney', category: 'dishes', imageUrl: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80' },
-    { id: 7, title: 'Nannari Sharbat Sarsaparilla Root Elixir', category: 'drinks', imageUrl: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80' },
-    { id: 8, title: 'Gongura Mamsam Clay Pot Curry', category: 'dishes', imageUrl: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80' }
+    { id: 6, title: 'Mokka Jonna Garelu with Chutney', category: 'dishes', imageUrl: 'assets/dishes/mokka_jonna_garelu.jpg' },
+    { id: 7, title: 'Nannari Sharbat Sarsaparilla Root Elixir', category: 'drinks', imageUrl: 'assets/dishes/nannari_sharbat.jpg' },
+    { id: 8, title: 'Gongura Mamsam Clay Pot Curry', category: 'dishes', imageUrl: 'assets/dishes/gongura_mamsam.jpg' }
   ];
 
   get filteredImages(): GalleryItem[] {

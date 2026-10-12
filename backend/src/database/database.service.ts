@@ -75,7 +75,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: true,
       is_spicy: false,
       is_chef_special: true,
-      image_url: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/mokka_jonna_garelu.jpg',
       rating: 4.9,
     },
     {
@@ -87,7 +87,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: false,
       is_spicy: true,
       is_chef_special: true,
-      image_url: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/royyala_iguru.jpg',
       rating: 4.9,
     },
     {
@@ -99,7 +99,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: false,
       is_spicy: true,
       is_chef_special: false,
-      image_url: 'https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/kodi_vepudu.jpg',
       rating: 4.7,
     },
     {
@@ -111,7 +111,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: false,
       is_spicy: true,
       is_chef_special: true,
-      image_url: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/mutton_ghee_roast.jpg',
       rating: 5.0,
     },
     {
@@ -123,7 +123,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: true,
       is_spicy: false,
       is_chef_special: false,
-      image_url: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/paneer_gutti_vankaya.jpg',
       rating: 4.6,
     },
     {
@@ -135,7 +135,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: false,
       is_spicy: true,
       is_chef_special: true,
-      image_url: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/gongura_mamsam.jpg',
       rating: 4.9,
     },
     {
@@ -147,7 +147,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: false,
       is_spicy: true,
       is_chef_special: true,
-      image_url: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/nellore_chepala_pulusu.jpg',
       rating: 4.8,
     },
     {
@@ -159,7 +159,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: false,
       is_spicy: true,
       is_chef_special: true,
-      image_url: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/kodi_vepudu_pulao.jpg',
       rating: 5.0,
     },
     {
@@ -171,7 +171,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: false,
       is_spicy: true,
       is_chef_special: true,
-      image_url: 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/mutton_biryani.jpg',
       rating: 4.9,
     },
     {
@@ -183,7 +183,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: true,
       is_spicy: true,
       is_chef_special: false,
-      image_url: 'https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/avakaya_paneer_pulao.jpg',
       rating: 4.7,
     },
     {
@@ -195,7 +195,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: true,
       is_spicy: false,
       is_chef_special: true,
-      image_url: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/signature_rose_milk.jpg',
       rating: 4.9,
     },
     {
@@ -207,7 +207,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: true,
       is_spicy: false,
       is_chef_special: false,
-      image_url: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/nannari_sharbat.jpg',
       rating: 4.6,
     },
     {
@@ -219,7 +219,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: true,
       is_spicy: false,
       is_chef_special: true,
-      image_url: 'https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/elaneer_payasam.jpg',
       rating: 4.9,
     },
     {
@@ -231,7 +231,7 @@ export class DatabaseService implements OnModuleInit {
       is_veg: true,
       is_spicy: false,
       is_chef_special: false,
-      image_url: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80',
+      image_url: 'assets/dishes/double_ka_meetha.jpg',
       rating: 4.8,
     }
   ];

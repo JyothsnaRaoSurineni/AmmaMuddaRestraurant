@@ -91,7 +91,7 @@ import { ApiService, Order, MenuItem } from '../../services/api.service';
 
               <div class="cart-items-list">
                 <div *ngFor="let item of items" class="cart-item-row">
-                  <img [src]="item.dish.image_url" [alt]="item.dish.title" class="item-thumb">
+                  <img [src]="item.dish.image_url" [alt]="item.dish.title" class="item-thumb" (error)="onImgError($event)">
                   <div class="item-info">
                     <h6>{{ item.dish.title }}</h6>
                     <span class="item-price">₹{{ item.dish.price }}</span>
@@ -543,5 +543,9 @@ export class CartModalComponent implements OnInit {
       case 'Completed': return 3;
       default: return 0;
     }
+  }
+
+  onImgError(event: any) {
+    event.target.src = 'assets/dishes/mokka_jonna_garelu.jpg';
   }
 }
